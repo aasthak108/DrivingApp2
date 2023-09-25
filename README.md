@@ -24,7 +24,15 @@ How To Run:
 	GET:
 		"localhost:8080/api/alert/{alertId}"
 		alertId is the alert id which used while creating event through POST
-		sample GET API address = localhost:8080/api/alert/3
-		After the GET API call, the user will receive an alert object with an overspeeding flag to know whether it is safe or unsafe.
-
-Note: Postman can be used for API calls
+		sample GET API = localhost:8080/api/alert/3
+		After get call user will receive alert object with overspeeding flag to know whether it is safe or unsafe.
+		Sample Response:
+		{
+			"alertId": 3,
+			"timestamp": "Mon Sep 25 21:12:02 IST 2023",
+			"vehicleId": "1234",
+			"locationType": "highway",
+			"speed": 55,
+			"overSpeeding": false
+		}
+Note: Postman can be used for API calls.
