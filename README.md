@@ -1,5 +1,30 @@
-# driving-alert-app
+This is Java web-app which shows driving alert notification through API.
 
-This is spring boot app for driving alerts.
+GET -> to get the alert by passing id
+POST -> To create event which will be sent via IOT, and based on event engine will create drving safe alert
 
-GET and POST operation is supported by this app.
+How To Run:
+
+-> Open the project
+-> Go to the class SpringBootApp
+-> Run Project from here as Spring boot, you will be finding play button in IDE (IntelliJ)
+-> Check console for information
+-> By default project will start on 8080 port
+-> Below are the url for APIs
+  
+  POST: "localhost:8080/api/createAlertEvent"
+	Sample Request:
+	  {
+		"alertId": "3",
+		"speed": 70,
+		"vehicleId" : "1234",
+		"locationType":"residential"
+	  }
+ 
+	GET:
+		"localhost:8080/api/alert/{alertId}"
+		alertId is the alert id which used while creating event through POST
+		sample GET API address = localhost:8080/api/alert/3
+		After the GET API call, the user will receive an alert object with an overspeeding flag to know whether it is safe or unsafe.
+
+Note: Postman can be used for API calls
