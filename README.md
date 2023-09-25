@@ -20,6 +20,10 @@ How To Run:
 		"vehicleId" : "1234",
 		"locationType":"residential"
 	  }
+     Sample Response:
+	  {
+		3
+	  }
  
 	GET:
 		"localhost:8080/api/alert/{alertId}"
